@@ -38,6 +38,12 @@ This exercise will help you to:
 
 ![cofee-book pic](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_141038aa0f5ce10c722722400bfdc6d5.jpg)
 
+### Iteration 0 - Irongenerate
+
+```bash
+irongenerate coffee-books
+```
+
 ### Iteration 1 - Create the User Model
 
 In `models` folder, create a new model `User.js`. For now, this model will have:
