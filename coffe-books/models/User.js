@@ -11,6 +11,7 @@ const userSchema = new Schema(
         ref: 'Places',
       },
     ],
+    facebookId: String,
   },
   {
     versionKey: false,

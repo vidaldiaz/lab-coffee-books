@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
 
 const {
   loginView,
@@ -18,6 +19,16 @@ router.get('/login', loginView)
 router.get('/signup', signupView)
 router.post('/signup', signupProcess)
 router.post('/login', loginProcess)
+
+router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }))
+router.get(
+  '/auth/facebook/callback',
+  passport.authenticate('facebook', {
+    successRedirect: '/places',
+    failureRedirect: '/login',
+    scope: ['email'],
+  })
+)
 
 router.get('/places', showPlaces)
 

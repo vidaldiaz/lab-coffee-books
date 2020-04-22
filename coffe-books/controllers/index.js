@@ -5,9 +5,9 @@ exports.loginView = (req, res) => res.render('login')
 exports.signupView = (req, res) => res.render('signup')
 
 exports.signupProcess = async (req, res) => {
-  const { email, password } = req.body
+  const { name, email, password } = req.body
   console.log(req.body)
-  await User.register({ email, places: [] }, password)
+  await User.register({ name, email, places: [] }, password)
   res.redirect('/')
 }
 
